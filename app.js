@@ -17,7 +17,7 @@ const DIVS = [
 ];
 const BPM_MIN = 60, BPM_MAX = 200;
 const LOOKAHEAD = 0.04;      // seconds scheduled ahead
-const TICK_MS = 8;
+const TICK_MS = 12;
 const NUDGE_RATE = 0.04;     // phase shift per second while nudge is held (4%)
 const NUDGE_STEP = 0.005;    // phase shift per nudge tap
 const STORE_KEY = 'xpad-v1';
