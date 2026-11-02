@@ -61,7 +61,7 @@ const $ = (id) => document.getElementById(id);
 
 // ---------- audio graph ----------
 const AC = window.AudioContext || window.webkitAudioContext;
-const ctx = new AC({ latencyHint: 'interactive' });
+const ctx = new AC({ latencyHint: 'playback' });
 const master = ctx.createGain();
 const limiter = ctx.createDynamicsCompressor();
 limiter.threshold.value = -1;
