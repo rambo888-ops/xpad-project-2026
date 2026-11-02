@@ -74,7 +74,7 @@ master.connect(limiter).connect(ctx.destination);
 function volumeDb(v) { return v <= 0 ? -Infinity : -42 + 48 * v; }
 function applyVolume() {
   const db = volumeDb(state.volume);
-  master.gain.setTargetAtTime(db === -Infinity ? 0 : Math.pow(10, db / 20), ctx.currentTime, 0.01);
+  master.gain.setTargetAtTime(db === -Infinity ? 0 : Math.min(0.25, Math.pow(10, db / 20)), ctx.currentTime, 0.01);
 }
 applyVolume();
 
